@@ -1,0 +1,33 @@
+var input = `don't tread on me`
+
+var vowels = ['a', 'e', 'i', 'o', 'u']
+
+var resultsArray = []
+
+for (let i = 0; i < input.length; i++) {
+    const inputCount = input[i];
+
+    if (inputCount === 'e') {
+    resultsArray.push(input[i])
+} else if (inputCount === 'u') {
+    resultsArray.push(input[i])
+}
+
+    for (let j = 0; j < vowels.length; j++) {
+        const vowelCount = vowels[j];
+        
+        if (inputCount === vowelCount) {
+            resultsArray.push(vowelCount);
+        }
+    }
+}
+
+var resultString = resultsArray.join('')
+
+var resultString = resultString.toUpperCase()
+
+
+// console.log(input.length);
+// console.log(vowels.length);
+// console.log(resultsArray);
+console.log(resultString);
